@@ -1,0 +1,25 @@
+name: "✨ Feature"
+description: "기능 구현을 위한 이슈 템플릿입니다."
+title: "[타입]: 구현 제목"
+labels: ["✨ feat"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "❔ 기능 설명"
+      description: "구현할 기능에 대해 간단히 설명해 주세요."
+      value: |
+        - 구현할 기능에 대한 설명
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: "✅ 구현 상세"
+      description: "해야 할 작업 목록을 나열해 주세요."
+      value: |
+        - [ ] 작업 내용 1
+        - [ ] 작업 내용 2
+    validations:
+      required: true
