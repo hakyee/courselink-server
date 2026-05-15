@@ -30,7 +30,7 @@ public class CourseService {
         return new CourseResponseDto(savedCourse);
     }
 
-    public List<CourseResponseDto> getCourse() {
+    public List<CourseResponseDto> getCourses() {
         return courseRepository.findAll().stream().map(CourseResponseDto::new).collect(Collectors.toList());
     }
 }
