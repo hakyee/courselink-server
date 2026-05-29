@@ -1,26 +1,11 @@
 package com.courselink.server.dto;
 
-public class CourseRequestDto {
-    private String title;
-    private String description;
-    private String url;
-    private int price;
+import java.util.List;
 
-    public CourseRequestDto() {}
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-}
+public record CourseRequestDto (
+    String title,
+    String description,
+    String url,
+    int price,
+    List<String> tags
+) {}
