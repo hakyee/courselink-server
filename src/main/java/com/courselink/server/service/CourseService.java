@@ -48,4 +48,10 @@ public class CourseService {
     public List<CourseResponseDto> getCourses() {
         return courseRepository.findAll().stream().map(CourseResponseDto::new).collect(Collectors.toList());
     }
+
+    @Transactional(readOnly = true)
+    public CourseResponseDto getCourse(Long id) {
+        Course course = courseRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 강의가 존재하지 않습니다. id=" + id));
+        return new CourseResponseDto(course);
+    }
 }
