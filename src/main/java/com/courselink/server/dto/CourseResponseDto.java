@@ -1,6 +1,7 @@
 package com.courselink.server.dto;
 
 import com.courselink.server.domain.Course;
+import com.courselink.server.domain.Tag;
 import java.util.List;
 
 public record CourseResponseDto (
