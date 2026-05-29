@@ -41,4 +41,10 @@ public class Course {
         this.url = url;
         this.price = price;
     }
+
+    public void addTag(Tag tag) {
+        if(!this.tags.contains(tag)) {
+            this.tags.add(tag);
+        }
+    }
 }
